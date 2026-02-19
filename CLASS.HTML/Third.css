@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+}
+
+#header {
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#sign {
+    color: black;
+    background-color: aqua;
+    padding: 1rem;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 2rem;
+}
+
+#dashboard {
+    color: white;
+    background-color: black;
+    padding-left: 40px;
+    height: 200vh;
+    width: 15vw;
+}
+
+#dashboard ul li {
+    list-style: none;
+    padding: 1rem 0;
+}
+
+#dashboard h3 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#skills {
+    margin-top: 100px;
+}
+
+#upgrade {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#learn {
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#explore {
+    color: black;
+    background-color: aqua;
+    padding: 1rem;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-radius: 2rem;
+    margin-left: 40px;
+    font-weight: bold;
+    border: 2px solid aqua;
+}
+
+img {
+    margin-top: 100px;
+    height: 70vh;
+    border-radius: 0.8rem;
+}
+
+#small {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.hello {
+    color: aqua;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.hi {
+    color: black;
+    font-size: 2rem;
+}
+
+.small {
+    box-shadow: 2px 2px 2px 2px rgb(168, 167, 167);
+    padding: 4rem;
+    border-radius: 2rem;
+}
+
+#last {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    gap: 2rem;
+}
+
+.hola {
+    color: black;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.child {
+    border-radius: 2rem;
+    box-shadow: 2px 2px 2px 2px rgb(168, 167, 167);
+    padding: 3rem;
+}
+
+.hel {
+    color: aqua;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.hii {
+    color: black;
+    font-size: 1rem;
+}
+
+#footer {
+    color: white;
+    background-color: black;
+    padding-left: 400px;
+    height: 10vh;
+    font-size: 2rem;
+    padding-top: 20px;
+}
+
+#top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#start {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+#mainbody {
+    margin-left: 40px;
+}
+
+@media  screen and (max-width: 768px) {
+    #dashboard{
+        display: none;
+        background-color: aqua;
+    }
+    #top{
+        grid-template-columns: 1fr;
+    }
+    #mainbody{
+        margin-left: 0px;
+        background-color: violet;
+    }
+    #small{
+        flex-direction: column;
+        padding: 0rem;
+        gap: 1rem;
+        width: 80%;
+        background: red;
+    }
+    #last{
+        flex-direction: column;
+        width: 50%;
+    }
+    #mainbody{
+        margin: 0rem;
+    }
+    
+}
