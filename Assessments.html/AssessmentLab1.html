@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Event Sphere - Event Booking Platform Urmika</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<style>
+body{
+background:#f3f4f6;
+font-family:Arial;
+}
+.navbar-brand{
+font-weight:bold;
+font-size:24px;
+}
+.hero-title{
+font-size:50px;
+font-weight:bold;
+}
+.section-title{
+font-weight:bold;
+margin-bottom:30px;
+}
+.card:hover{
+transform:scale(1.05);
+transition:0.3s;
+box-shadow:0px 8px 20px rgba(0,0,0,0.2);
+}
+.category-icon{
+font-size:40px;
+}
+footer{
+background:#111;
+color:white;
+padding:20px;
+text-align:center;
+}
+.countdown{
+font-size:22px;
+font-weight:bold;
+color:red;
+}
+</style>
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+<a class="navbar-brand" href="#">Event Sphere</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item">
+<a class="nav-link" href="#home">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#events">Events</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#about">About</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#contact">Contact</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- HERO CAROUSEL -->
+<div id="home" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2" class="d-block w-100" height="500">
+<div class="carousel-caption">
+<h1 class="hero-title">Discover Amazing Events</h1>
+<p>Concerts • Tech Talks • College Fests</p>
+</div>
+</div>
+<div class="carousel-item">
+<img src="https://images.unsplash.com/photo-1511578314322-379afb476865" class="d-block w-100" height="500">
+<div class="carousel-caption">
+<h1>Book Tickets Instantly</h1>
+<p>Fast and easy booking</p>
+</div>
+</div>
+</div>
+</div>
+<!-- CATEGORIES -->
+ <div class="container mt-5 text-center">
+<h2 class="section-title">Event Categories</h2>
+<div class="row">
+<div class="col-md-3">
+<i class="bi bi-music-note-beamed category-icon"></i>
+<h5>Concerts</h5>
+</div>
+<div class="col-md-3">
+<i class="bi bi-cpu category-icon"></i>
+<h5>Tech Events</h5>
+</div>
+<div class="col-md-3">
+<i class="bi bi-trophy category-icon"></i>
+<h5>Competitions</h5>
+</div>
+<div class="col-md-3">
+<i class="bi bi-people category-icon"></i>
+<h5>College Fests</h5>
+</div>
+</div>
+</div>
+<!-- EVENTS -->
+<div id="events" class="container mt-5">
+<h2 class="section-title text-center">Trending Events</h2>
+<div class="row g-4">
+<!-- EVENT 1 -->
+<div class="col-md-4">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Live Music Night</h5>
+<p>Experience a live concert with top bands.</p>
+<span class="badge bg-danger">Trending</span>
+<p class="countdown" id="timer"></p>
+<button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#bookingModal">
+Book Ticket
+</button>
+</div>
+</div>
+</div>
+<!-- EVENT 2 -->
+<div class="col-md-4">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1531482615713-2afd69097998" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">AI Workshop</h5>
+<p>Learn Artificial Intelligence basics.</p>
+<span class="badge bg-success">New</span>
+<button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#bookingModal">
+Book Ticket
+</button>
+</div>
+</div>
+</div>
+<!-- EVENT 3 -->
+<div class="col-md-4">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">College Fest 2026</h5>
+<p>Dance, music, food and fun events.</p>
+<span class="badge bg-warning">Popular</span>
+<button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#bookingModal">
+Book Ticket
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- BOOKING MODAL -->
+<div class="modal fade" id="bookingModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Book Your Ticket</h5>
+<button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+<div class="modal-body">
+<form>
+<div class="mb-3">
+<label>Name</label>
+<input type="text" class="form-control">
+</div>
+<div class="mb-3">
+<label>Email</label>
+<input type="email" class="form-control">
+</div>
+<div class="mb-3">
+<label>Number of Tickets</label>
+<input type="number" class="form-control">
+</div>
+<button class="btn btn-success w-100">
+Confirm Booking
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<!-- ABOUT -->
+<div id="about" class="container mt-5">
+<h2 class="section-title text-center">About Event Sphere</h2>
+<p class="text-center">
+Event Sphere is a student-friendly platform where users can discover and book tickets 
+for concerts, workshops, college fests, and tech events.  
+This project demonstrates a responsive frontend website using Bootstrap.
+</p>
+</div>
+<!-- CONTACT -->
+<div id="contact" class="container mt-5">
+<h2 class="section-title text-center">Contact Us</h2>
+<div class="row justify-content-center">
+<div class="col-md-6">
+<form>
+<div class="mb-3">
+<input type="text" class="form-control" placeholder="Your Name">
+</div>
+<div class="mb-3">
+<input type="email" class="form-control" placeholder="Your Email">
+</div>
+<div class="mb-3">
+<textarea class="form-control" rows="4" placeholder="Message"></textarea>
+</div>
+<button class="btn btn-primary w-100">
+Send Message
+</button>
+</form>
+</div>
+</div>
+</div>
+<!-- FOOTER -->
+<footer class="mt-5">
+<p>© 2026 EventSphere | Frontend Development Project</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
